@@ -1,0 +1,214 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. New Application (Scaffold)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "new",
+        "--company",
+        "${input:companyName}",
+        "--role",
+        "${input:roleName}",
+        "--location",
+        "${input:locationName}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "2. Analyze Job Description & Match CV",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "analyze",
+        "--app",
+        "${input:appFolder}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "3. List Available Projects in Bank",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "list-projects"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "4. Set Projects (Swap & Check 1-Page)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "set-projects",
+        "--app",
+        "${input:appFolder}",
+        "--projects",
+        "${input:projectsList}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "5. Set Location Header",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "set-location",
+        "--app",
+        "${input:appFolder}",
+        "--location",
+        "${input:newLocation}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "6. Build CV & Check 1-Page Constraint",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "build",
+        "--app",
+        "${input:appFolder}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "7. Generate Outreach (Spanish)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "outreach",
+        "--app",
+        "${input:appFolder}",
+        "--contact",
+        "${input:contactName}",
+        "--lang",
+        "es"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "8. Generate Outreach (English)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "outreach",
+        "--app",
+        "${input:appFolder}",
+        "--contact",
+        "${input:contactName}",
+        "--lang",
+        "en"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "9. Generate Outreach (French)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "outreach",
+        "--app",
+        "${input:appFolder}",
+        "--contact",
+        "${input:contactName}",
+        "--lang",
+        "fr"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "10. List All Applications Pipeline",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "list"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "11. Update Application Status",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "status",
+        "--app",
+        "${input:appFolder}",
+        "--set",
+        "${input:statusSelect}"
+      ],
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "companyName",
+      "type": "promptString",
+      "description": "Enter the target company name (e.g. Amazon, Mistral, Valeo, Indra):",
+      "default": "Amazon"
+    },
+    {
+      "id": "roleName",
+      "type": "promptString",
+      "description": "Enter the role title (e.g. CV_Scientist, RD_Engineer):",
+      "default": "CV_Scientist"
+    },
+    {
+      "id": "locationName",
+      "type": "promptString",
+      "description": "Enter location (e.g. Madrid, Barcelona, Paris, Montevideo, Remote):",
+      "default": "Madrid"
+    },
+    {
+      "id": "newLocation",
+      "type": "promptString",
+      "description": "Enter the new location to update in the header (e.g. Barcelona, Paris, Montevideo):",
+      "default": "Barcelona"
+    },
+    {
+      "id": "appFolder",
+      "type": "promptString",
+      "description": "Enter application folder name (e.g. Amazon_CV_Scientist, Mistral_Research_Engineer):",
+      "default": "Amazon_CV_Scientist"
+    },
+    {
+      "id": "projectsList",
+      "type": "promptString",
+      "description": "Enter project ID(s) to include (e.g. kalman_vae or 3d_gs_simulation,mare_fest):",
+      "default": "kalman_vae"
+    },
+    {
+      "id": "contactName",
+      "type": "promptString",
+      "description": "Enter recruiter or hiring manager name (optional):",
+      "default": "Carlos"
+    },
+    {
+      "id": "statusSelect",
+      "type": "pickString",
+      "description": "Select the new application status:",
+      "options": [
+        "Drafted",
+        "Tailored",
+        "Applied",
+        "Interviewing",
+        "Offer",
+        "Rejected"
+      ],
+      "default": "Applied"
+    }
+  ]
+}
+

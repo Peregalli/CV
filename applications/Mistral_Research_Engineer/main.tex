@@ -1,0 +1,109 @@
+\documentclass[10pt, a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.3cm, right=1.3cm, top=1.0cm, bottom=1.0cm]{geometry}
+\usepackage{enumitem}     % Custom lists
+\usepackage{hyperref}     % Hyperlinks
+\usepackage{titlesec}     % Section titles
+\usepackage{xcolor}       % Colors
+
+% Link styling
+\definecolor{darkblue}{RGB}{0, 0, 139}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+    pdftitle={Agustina Diaz Peregalli - CV},
+    pdfauthor={Agustina Diaz Peregalli}
+}
+
+% Compact list spacing for strict 1-page budget
+\setlist[itemize]{leftmargin=1.2em, nosep, topsep=1pt, itemsep=1pt}
+
+% Section title formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
+% Subsection formatting
+\newcommand{\entryheader}[4]{
+    \noindent \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \vspace{1pt}
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{Agustina Díaz Peregalli}} \\ \vspace{2pt}
+    {\large \textbf{Computer Vision \& Machine Learning R\&D Engineer}} \\ \vspace{2pt}
+% === LOCATION_LINE ===
+    Paris, France \textbar{} (Open to Hybrid/Remote) \\ \vspace{2pt}
+    \href{mailto:adiazperegalli@gmail.com}{adiazperegalli@gmail.com} \textbar{} 
+    \href{https://www.linkedin.com/in/agustina-diaz-peregalli/}{LinkedIn: Agustina Díaz} \textbar{} 
+    \href{https://github.com/Peregalli}{GitHub: Peregalli}
+\end{center}
+
+% --- PROFILE SUMMARY ---
+\section{Profile Summary}
+Electrical Engineer and MVA Master's graduate (ENS Paris) specializing in Computer Vision and Applied Machine Learning. Brings 4+ years of industry R\&D experience designing, training, and deploying high-impact CV solutions—ranging from 3D Gaussian Splatting and physical simulation to edge/mobile real-time inference and multimodal sensor systems. Seeking full-time R\&D Engineer positions in Spain, France, or remote/hybrid.
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{3D Vision \& ML/CV:} 3D Gaussian Splatting (3D GS), 3DMM, NeRFs, PyTorch, TensorFlow, Ultralytics (YOLO), MediaPipe, OpenCV, Blender
+    \item \textbf{Edge AI \& Optimization:} Qualcomm AI Engine, TensorFlow Lite, MobileNet, Model Pruning, Quantization, ONNX, Docker
+    \item \textbf{MLOps \& Cloud Platforms:} AWS (SageMaker, S3), ClearML, Google Cloud, Pandas, NumPy, Scikit-learn, Git/GitHub, Linux
+    \item \textbf{Programming Languages:} Python, C++ (Basic), MATLAB, SQL (Basic)
+\end{itemize}
+
+% --- WORK EXPERIENCE ---
+\section{Work Experience}
+
+\entryheader{Dassault Systèmes}{Paris, France}{Computer Vision R\&D Engineer Intern}{May 2026 -- Oct 2026}
+\begin{itemize}
+    \item Researched and developed algorithms to estimate the \textbf{internal volumetric filling} of \textbf{3D Gaussian Splats (3D GS)} from multi-view surface captures.
+    \item Modeled physical material properties and structural density to enable accurate \textbf{physics-based simulation} of reconstructed 3D assets.
+    \item \textit{Keywords: 3D Gaussian Splatting (3D GS), PyTorch, Physics Simulation, Geometry Processing, Python.}
+\end{itemize}
+\vspace{3pt}
+
+\entryheader{Digital Sense}{Montevideo, Uruguay}{R\&D Engineer \textbar{} Jr. R\&D Engineer \textbar{} R\&D Assistant}{March 2021 -- Sept 2025}
+\begin{itemize}
+    \item \textbf{Multimodal Marine Vision (2025):} Architected and deployed an end-to-end multi-modal vision system (\textbf{RGB \& Thermal}) for long-range marine wildlife detection. Built AWS SageMaker/S3 MLOps pipeline and trained temporal models using \textbf{VideoMAE}.
+    \item \textbf{Edge CV \& Road Inspection (2024--2025):} Developed an automated road crack and asset detection pipeline. Trained custom \textbf{YOLO/Ultralytics} models for adverse optical conditions and optimized latency for edge rollout via \textbf{Qualcomm AI} \& \textbf{Docker}.
+    \item \textbf{Real-Time Mobile CV \& AR (2021--2024):} Engineered the core CV engine for a commercial virtual makeup try-on app (\href{https://www.ulta.com/company/app?srsltid=AfmBOorrV_A9GKMtuqNiCTeg1_JPuXVPm-JVckez5tHgEYyQP1o90QxV}{Ulta App}). Achieved real-time mobile inference via \textbf{TensorFlow Lite} model pruning/quantization, benchmarked \textbf{3D Face Morphable Models (3DMM)}, and mitigated algorithmic bias.
+    \item \textit{Keywords: Qualcomm AI, TensorFlow Lite, PyTorch, YOLO, AWS SageMaker, 3DMM, Docker, MediaPipe.}
+\end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+
+\entryheader{École Normale Supérieure (ENS)}{Paris, France}{M.S. Mathematics, Vision and Learning (MVA)}{Sept 2025 -- Sept 2026}
+\begin{itemize}
+    \item \textbf{Coursework:} 3D Computer Vision, Convex Optimization, Geometry Processing \& Geometric Deep Learning, Probabilistic Graphical Models.
+    \item \textbf{Honors:} Awarded Uruguay's \textbf{ANII Postgraduate Studies Scholarship} for academic excellence to fund MVA studies.
+\end{itemize}
+\vspace{3pt}
+
+\entryheader{Universidad de la República}{Montevideo, Uruguay}{B.S. Electrical Engineering}{March 2017 -- March 2024}
+\begin{itemize}
+    \item \textbf{Coursework:} Machine Learning \& Pattern Recognition, Image Processing, Signal Processing, Probability \& Statistics.
+\end{itemize}
+
+% --- PUBLICATIONS & FEATURED PROJECTS ---
+\section{Publications \& Featured Projects}
+\begin{itemize}
+    \item \textbf{Publication (IBERAMIA 2024 / Springer 2025):} Zimmer, S., \textbf{Díaz, A.}, Aguilera, N., Estradé, M. J., Lecumberry, F., \& Musé, P. \textit{Evaluation of Mares Uterine Health Based on Endometrial Biopsies Using Image Processing and Machine Learning Techniques.} LNCS 15277, Springer. \href{https://doi.org/10.1007/978-3-031-80366-6_13}{DOI: 10.1007/978-3-031-80366-6\_13}
+% === PROJECTS_BEGIN ===
+    \item \textbf{Mare FEst (Thesis Project):} Developed deep segmentation and clinical feature extraction models for endometrial biopsy analysis, directly establishing the research foundation for the published Springer paper. \href{https://github.com/Peregalli/MareFEst}{[GitHub]} \textbar{} \href{https://hdl.handle.net/20.500.12008/43668}{[Thesis]}
+% === PROJECTS_END ===
+\end{itemize}
+
+% --- LANGUAGES ---
+\section{Languages}
+\textbf{Spanish:} Native \quad \textbar{} \quad \textbf{English:} Full Professional (B2+/C1) \quad \textbar{} \quad \textbf{Portuguese:} Intermediate \quad \textbar{} \quad \textbf{French:} Conversational (A2/B1 in progress)
+
+\end{document}

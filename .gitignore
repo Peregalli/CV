@@ -1,0 +1,17 @@
+# LaTeX auxiliary build files
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# System & temporary
+.DS_Store
+Thumbs.db
+*.tmp

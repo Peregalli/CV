@@ -1,0 +1,47 @@
+{
+  "projects": [
+    {
+      "id": "mare_fest",
+      "title": "Mare FEst: Mare Fertility Estimation",
+      "tags": ["medical", "computer-vision", "segmentation", "pytorch", "research"],
+      "description": "Bachelor's Degree Thesis: Developed segmentation models and processing pipeline to analyze mare uterine biopsies, leading to 2025 IBERAMIA Springer publication.",
+      "latex": "\\item \\textbf{Mare FEst (Thesis Project):} Developed segmentation models and an image processing pipeline for endometrial biopsy analysis, , directly establishing the research foundation for the published Springer paper. \\href{https://github.com/Peregalli/MareFEst}{[GitHub]} \\textbar{} \\href{https://hdl.handle.net/20.500.12008/43668}{[Thesis]}"
+    },
+    {
+      "id": "kalman_vae",
+      "title": "Kalman VAE: Disentangled Recognition & Dynamics",
+      "tags": ["research", "generative-models", "vae", "probabilistic", "graphical-models", "pytorch"],
+      "description": "Reimplementation of 'A Disentangled Recognition and Nonlinear Dynamics Model for Unsupervised Learning'. Analyzing VAE algorithm capacity limits.",
+      "latex": "\\item \\textbf{Kalman VAE (MVA Project):} Reimplemented \\textit{\"A Disentangled Recognition and Nonlinear Dynamics Model for Unsupervised Learning\"} to evaluate latent disentanglement, variational inference bounds, and nonlinear dynamics in PyTorch."
+    },
+    {
+      "id": "knowledge_graphs",
+      "title": "Holographic Embeddings of Knowledge Graphs",
+      "tags": ["research", "knowledge-graphs", "geometric-dl", "embeddings", "python"],
+      "description": "Based on 'Holographic Embeddings of Knowledge Graphs'. Studying model capacity in larger datasets and proposing fair evaluation alternatives.",
+      "latex": "\\item \\textbf{Knowledge Graph Embeddings (MVA Project):} Investigated Holographic Embeddings (HolE) for relational learning; benchmarked representation capacity on large-scale datasets and formulated fair evaluation metrics."
+    },
+    {
+      "id": "recaptured_monitor_detection",
+      "title": "Detection of Re-captured Images from a Monitor",
+      "tags": ["computer-vision", "image-processing", "forensics", "python"],
+      "description": "Algorithm implementation capable of recognizing whether an image was taken from a real-life scene or an LCD monitor.",
+      "latex": "\\item \\textbf{Recaptured Image Forensics:} Developed spatial-frequency and moir\\'{e} pattern analysis algorithms to reliably classify whether an image was captured from a physical scene versus an LCD display."
+    },
+    {
+      "id": "3d_gs_simulation",
+      "title": "Physical Simulation of 3D Gaussian Splats",
+      "tags": ["3d", "3dgs", "gaussian-splatting", "physics-simulation", "geometry", "pytorch"],
+      "description": "Estimated internal volumetric filling, material properties, and structural parameters of 3D Gaussian Splats to generate physical simulations of reconstructed objects.",
+      "latex": "\\item \\textbf{Physical Simulation of 3D Gaussian Splats:} Researched volumetric internal filling and physical material estimation for 3D GS to enable high-fidelity real-time physics simulations."
+    },
+    {
+      "id": "llm_translation",
+      "title": "LLM Reasoning for Machine Translation",
+      "tags": ["llm", "nlp", "translation", "reasoning", "research"],
+      "description": "Utilized large language models to improve the accuracy and fluency of machine translation systems.",
+      "latex": "\\item \\textbf{LLM Reasoning for Machine Translation:} Finetuning LLM (gemma-3-1B and Qwen2.5-1.5B) and evaluating chain of thought reasoning to enhance machine translation accuracy."
+    }
+  ]
+}
+
