@@ -1,0 +1,107 @@
+\documentclass[10pt, a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.3cm, right=1.3cm, top=0.8cm, bottom=0.8cm]{geometry}
+\usepackage{enumitem}     % Custom lists
+\usepackage{hyperref}     % Hyperlinks
+\usepackage{titlesec}     % Section titles
+\usepackage{xcolor}       % Colors
+
+% Link styling
+\definecolor{darkblue}{RGB}{0, 0, 139}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+    pdftitle={Agustina Diaz Peregalli - CV},
+    pdfauthor={Agustina Diaz Peregalli}
+}
+
+% Compact list spacing for strict 1-page budget
+\setlist[itemize]{leftmargin=1.2em, nosep, topsep=0.5pt, itemsep=0.5pt}
+
+% Section title formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2.5pt}{1pt}
+
+% Subsection formatting
+\newcommand{\entryheader}[4]{
+    \noindent \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \vspace{0pt}
+}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{Agustina Díaz Peregalli}} \\ \vspace{1.5pt}
+    {\large \textbf{AI \& Computer Vision R\&D Engineer \textbar{} Multimodal Perception \& Edge AI}} \\ \vspace{1.5pt}
+% === LOCATION_LINE ===
+    Paris, France \textbar{} (On-site / Hybrid) \\ \vspace{1.5pt}
+    \href{mailto:adiazperegalli@gmail.com}{adiazperegalli@gmail.com} \textbar{} 
+    \href{https://www.linkedin.com/in/agustina-diaz-peregalli/}{LinkedIn: Agustina Díaz} \textbar{} 
+    \href{https://github.com/Peregalli}{GitHub: Peregalli}
+\end{center}
+
+% --- PROFILE SUMMARY ---
+\section{Profile Summary}
+Electrical Engineer and MVA Master's graduate (ENS Paris-Saclay) with strong foundations in signal processing, physical-AI, and multimodal machine learning. Brings 4+ years of industry R\&D experience designing, training, and shipping perception models to production—spanning multimodal marine perception (RGB/Thermal, VideoMAE), physics-based parameter estimation, and real-time edge optimization (Qualcomm AI, TFLite) for compute- and power-constrained hardware. Motivated to build Pelagon's foundational multimodal perception stack for autonomous maritime defense.
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Multimodal Perception \& ML:} Multimodal Sensor Fusion, Self-Supervised Learning, VideoMAE, Time-Series \& Kinematic Modeling, 3D Vision, PyTorch, TensorFlow, OpenCV, MediaPipe
+    \item \textbf{Edge AI \& Low-Power Optimization:} Qualcomm AI Engine, TensorFlow Lite, Model Pruning \& Quantization, MobileNet, Edge Inference, Docker, Linux
+    \item \textbf{Signal Processing \& Systems:} Signal Processing (Fourier, Filter Design, Low-SNR Analysis), State-Space Models (Kalman Filters), AWS (SageMaker, S3), ClearML, Git/GitHub
+    \item \textbf{Programming Languages \& Math:} Python, C++ (Basic), MATLAB, SQL, Convex Optimization, Probabilistic Graphical Models
+\end{itemize}
+
+% --- WORK EXPERIENCE ---
+\section{Work Experience}
+
+\entryheader{Dassault Systèmes}{Paris, France}{Computer Vision R\&D Engineer Intern}{May 2026 -- Oct 2026}
+\begin{itemize}
+    \item Researched and developed algorithms to estimate the internal volumetric filling of 3D Gaussian Splats (3D GS) from multi-view sensor captures.
+    \item Modeled physical material properties and structural density to enable accurate \textbf{physics-based simulation} of reconstructed 3D assets.
+    \item \textit{Keywords: 3D Gaussian Splatting, Physical Parameter Estimation, Optimization, NanoBanana, VEO 3, Geometry Processing, Python.}
+\end{itemize}
+
+\entryheader{Digital Sense}{Montevideo, Uruguay}{R\&D Engineer \textbar{} Jr. R\&D Engineer \textbar{} R\&D Assistant}{March 2021 -- Sept 2025}
+\begin{itemize}
+    \item \textbf{Multimodal Marine Perception (2025):} Architected and deployed an end-to-end multimodal perception system (\textbf{RGB \& Thermal}) for maritime detection under adverse, low-SNR conditions. Built automated SageMaker/S3 pipelines and trained temporal self-supervised models using \textbf{VideoMAE}.
+    \item \textbf{Edge AI \& Hardware Optimization (2024--2025):} Developed an automated edge detection pipeline; trained custom models for adverse operational environments and optimized inference latency for compute-constrained edge hardware via Qualcomm AI \& \textbf{Docker}.
+    \item \textbf{Real-Time Edge CV \& Production Delivery (2021--2024):} Engineered the core CV engine for a commercial application (\href{https://www.ulta.com/company/app?srsltid=AfmBOorrV_A9GKMtuqNiCTeg1_JPuXVPm-JVckez5tHgEYyQP1o90QxV}{Ulta App}) serving high-volume retail users. Fine-tuned \textbf{MobileNet} models for landmarking/segmentation, compressed models for edge inference via TFLite pruning/quantization, and curated balanced datasets.
+    \item \textit{Keywords: Multimodal Fusion, Qualcomm AI, TensorFlow Lite, PyTorch, VideoMAE, AWS SageMaker, MobileNet, Docker, Edge Optimization.}
+\end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+
+\entryheader{École Normale Supérieure (ENS)}{Paris, France}{M.S. Mathematics, Vision and Learning (MVA)}{Sept 2025 -- Sept 2026}
+\begin{itemize}
+    \item \textbf{Coursework:} Convex Optimization, Probabilistic Graphical Models, 3D Computer Vision, Geometric Deep Learning.
+    \item \textbf{Honors:} Awarded Uruguay's \textbf{ANII Postgraduate Studies Scholarship} for academic excellence to fund MVA studies.
+\end{itemize}
+
+\entryheader{Universidad de la República}{Montevideo, Uruguay}{B.S. Electrical Engineering}{March 2017 -- March 2024}
+\begin{itemize}
+    \item \textbf{Coursework:} Signal Processing, Stochastic Processes \& Probability, Machine Learning \& Pattern Recognition, Image Processing.
+\end{itemize}
+
+% --- PUBLICATIONS & FEATURED PROJECTS ---
+\section{Publications \& Featured Projects}
+\begin{itemize}
+    \item \textbf{Publication (IBERAMIA 2024 / Springer 2025):} Zimmer, S., \textbf{Díaz, A.}, Aguilera, N., Estradé, M. J., Lecumberry, F., \& Musé, P. \textit{Evaluation of Mares Uterine Health Based on Endometrial Biopsies Using Image Processing and Machine Learning Techniques.} LNCS 15277, Springer. \href{https://doi.org/10.1007/978-3-031-80366-6_13}{DOI: 10.1007/978-3-031-80366-6\_13}
+% === PROJECTS_BEGIN ===
+    \item \textbf{Kalman VAE (MVA Research Project):} Reimplemented \textit{"A Disentangled Recognition and Nonlinear Dynamics Model for Unsupervised Learning"} in PyTorch; analyzed latent disentanglement, variational inference bounds, and state-space models for kinematic sensor dynamics under noise.
+% === PROJECTS_END ===
+\end{itemize}
+
+% --- LANGUAGES ---
+\section{Languages}
+\textbf{Spanish:} Native \quad \textbar{} \quad \textbf{English:} Full Professional (B2+/C1) \quad \textbar{} \quad \textbf{French:} Conversational \quad \textbar{} \quad \textbf{Portuguese:} Intermediate
+
+\end{document}

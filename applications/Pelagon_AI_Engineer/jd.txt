@@ -1,0 +1,34 @@
+=== JOB DESCRIPTION: Pelagon - AI Engineer (Paris, France) ===
+
+About the job
+Full-time · On-site (Paris Marseille)
+The sea is the physical layer of the economy—the conduit for our energy, communications, and trade. It is also Europe’s exposed flank. Pelagon is building the answer.
+Founded by Aymeric (serial deeptech entrepreneur; founded & exited Scortex, Leading AI solution for manufacturing quality) and Gauthier (Navy officer and McKinsey), Pelagon is building a foundational multimodal acoustic model for autonomous maritime protection (underwater and surface) in service of European sovereignty. It will be deployed on a distributed, autonomous network of vectors (UUVs, buoys, sailbuoys, seabed…) to provide real-time understanding of underwater threats.
+France and Europe have world-class acoustic engineers and a long history in underwater warfare. By bridging this expertise with modern physical-AI strategies (as seen in autonomous driving and robotics). Europe is still missing it’s naval NeoPrime, Pelagon aims to become to lead the way in autonomous marine protection—from detection to interception—partnering with leading navies, primes, and neo-primes, while also operating its own fleet as a service.
+Pelagon is backed by Hexa, the pioneer startup studio in Europe, which has launched 35+ companies, including unicorns like Front, Aircall, and Spendesk, combining €230m+ ARR and €750m raised.
+
+Why this matters
+The sea is the physical layer of the economy — and Europe's most exposed flank. Submarines, drones and threats move through it unseen because the ocean is opaque by default. Pelagon exists to change that: to give Europe a real-time, sovereign understanding of what moves beneath the surface, from detection to interception.
+At the core of that mission is a maritime foundational perception model — Pelagon's equivalent of the perception stack that made autonomous driving possible, but for the underwater domain. As an AI Engineer, you own the models at the heart of it, from research to deployment on a distributed, autonomous fleet of UUVs, buoys, sailbuoys and seabed sensors.
+
+What you'll do
+Design, train and ship state-of-the-art multimodal and acoustic models for underwater detection, classification and localization.
+Build the training pipeline end to end: self-supervised pre-training on large unlabeled acoustic corpora, then fine-tuning for specific threats.
+Fuse acoustic, kinematic and other sensor modalities into a single representation that holds up in low-SNR, real-world conditions.
+Shape Pelagon's data strategy — how we capture, curate and compound proprietary data from our own fleet into a durable advantage.
+Distill and optimize models to run on the edge: compute- and power-constrained hardware aboard autonomous vectors at sea.
+Close the loop with sea trials — turn field data and failure cases into the next iteration.
+
+What we look for
+Strong track record training models deployed in production, ideally on audio, signal, time-series or other non-image modalities.
+A physical-AI mindset: you've worked where models meet messy sensor data and real hardware, not just clean benchmarks.
+Instinct for data strategy — you treat the data flywheel as a core part of the model, not an afterthought.
+Confortable across the ML stack: data, architecture, training, evaluation and deployment. Bias for shipping; you measure success by what works at sea.
+Bonus: background in signal processing, or experience in defense, maritime, robotics or autonomous driving.
+
+Why join now
+Founding ownership. You'll be one of the first engineers and will define the technical foundation of the company. Meaningful equity comes with that.
+A mission with weight. This is hardware that protects critical infrastructure and Europe's maritime space.
+Real things, in the real ocean, fast. You'll see your work in the water within weeks, not years.
+AI-first, at the edge, in the real world. We train our own models and run them where it counts: in the water, on the device. You'll be solving the edge-ML and power problems most companies only talk about.
+A sovereign, European deeptech at the inflection point of a market with strong NATO and EU policy momentum behind it.
