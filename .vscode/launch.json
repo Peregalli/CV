@@ -2,7 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "1. New Application (Scaffold)",
+      "name": "⚡ Log Quick Application (LinkedIn / Online)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "log",
+        "--company",
+        "${input:companyName}",
+        "--role",
+        "${input:roleName}",
+        "--location",
+        "${input:locationName}",
+        "--notes",
+        "${input:quickNotes}"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "📄 Rebuild Base CVs (Spain & Paris)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/apply.py",
+      "args": [
+        "build-bases"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "1. New Tailored Application (Scaffold Folder)",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/apply.py",
@@ -172,6 +200,12 @@
       "default": "Madrid"
     },
     {
+      "id": "quickNotes",
+      "type": "promptString",
+      "description": "Enter notes or application source:",
+      "default": "LinkedIn Easy Apply"
+    },
+    {
       "id": "newLocation",
       "type": "promptString",
       "description": "Enter the new location to update in the header (e.g. Barcelona, Paris, Montevideo):",
@@ -211,4 +245,3 @@
     }
   ]
 }
-

@@ -560,6 +560,59 @@ def cmd_status(args):
         update_tracker(parts[0], " ".join(parts[1:]), "Unspecified", new_status, folder_path=str(app_folder))
 
 
+def cmd_log(args):
+    """Log any job application (e.g. LinkedIn Easy Apply) directly into tracker.csv."""
+    company = args.company.strip()
+    role = args.role.strip()
+    location = args.location.strip() if args.location else "Unspecified"
+    status = args.status.strip() if args.status else "Applied"
+    notes = args.notes.strip() if args.notes else "Quick Apply (LinkedIn/Online)"
+    
+    update_tracker(company, role, location, status, notes=notes, folder_path="Generic Base CV")
+    print(f"[OK] Logged application in {TRACKER_FILE}:")
+    print(f"     Company:  {company}")
+    print(f"     Role:     {role}")
+    print(f"     Location: {location}")
+    print(f"     Status:   {status}")
+    print(f"     Notes:    {notes}")
+
+
+def cmd_build_bases(args):
+    """Compile both Spain/Remote and Paris/Remote base CVs into PDFs."""
+    bases_dir = BASE_DIR / "bases"
+    if not bases_dir.exists():
+        print(f"[!] Error: {bases_dir} directory not found.")
+        return
+        
+    targets = [
+        ("main_spain_remote.tex", "Agustina_Diaz_CV_Spain_Remote.pdf"),
+        ("main_paris_remote.tex", "Agustina_Diaz_CV_Paris_Remote.pdf")
+    ]
+    
+    for tex_name, pdf_out_name in targets:
+        tex_path = bases_dir / tex_name
+        if not tex_path.exists():
+            print(f"[!] Warning: {tex_path} not found.")
+            continue
+            
+        print(f"[*] Compiling {tex_name} with pdflatex...")
+        subprocess.run(
+            ["pdflatex", "-interaction=nonstopmode", tex_name],
+            cwd=bases_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        
+        gen_pdf = bases_dir / tex_name.replace(".tex", ".pdf")
+        if gen_pdf.exists():
+            dest1 = bases_dir / pdf_out_name
+            dest2 = BASE_DIR / pdf_out_name
+            shutil.copy(gen_pdf, dest1)
+            shutil.copy(gen_pdf, dest2)
+            print(f"[OK] Built {pdf_out_name} (saved in root & bases/)")
+
+
 def resolve_app_folder(name_or_path):
     """Resolve user input to the correct application Path."""
     p = Path(name_or_path)
@@ -579,8 +632,21 @@ def main():
     parser = argparse.ArgumentParser(description="CV Tailoring Assistant & Application Tracker")
     subparsers = parser.add_subparsers(dest="command", help="Sub-command to execute")
     
+    # log (Quick tracking without folder)
+    p_lg = subparsers.add_parser("log", help="Log any quick application to tracker.csv")
+    p_lg.add_argument("--company", required=True, help="Target company name")
+    p_lg.add_argument("--role", required=True, help="Target role name")
+    p_lg.add_argument("--location", help="Role location (e.g. Madrid, Paris, Montevideo, Remote)")
+    p_lg.add_argument("--status", default="Applied", help="Status (default: Applied)")
+    p_lg.add_argument("--notes", help="Notes or source (e.g. LinkedIn Easy Apply)")
+    p_lg.set_defaults(func=cmd_log)
+
+    # build-bases
+    p_bb = subparsers.add_parser("build-bases", help="Recompile both Spain/Remote and Paris/Remote generic CVs")
+    p_bb.set_defaults(func=cmd_build_bases)
+    
     # new
-    p_new = subparsers.add_parser("new", help="Scaffold a new job application")
+    p_new = subparsers.add_parser("new", help="Scaffold a new tailored job application")
     p_new.add_argument("--company", required=True, help="Target company name")
     p_new.add_argument("--role", required=True, help="Target role name")
     p_new.add_argument("--location", help="Role location (e.g. Madrid, Paris, Montevideo, Remote)")
