@@ -566,14 +566,16 @@ def cmd_log(args):
     role = args.role.strip()
     location = args.location.strip() if args.location else "Unspecified"
     status = args.status.strip() if args.status else "Applied"
+    pillar = args.pillar.strip() if getattr(args, "pillar", None) else ""
     notes = args.notes.strip() if args.notes else "Quick Apply (LinkedIn/Online)"
     
-    update_tracker(company, role, location, status, notes=notes, folder_path="Generic Base CV")
+    update_tracker(company, role, location, status, pillar=pillar, notes=notes, folder_path="Generic Base CV")
     print(f"[OK] Logged application in {TRACKER_FILE}:")
     print(f"     Company:  {company}")
     print(f"     Role:     {role}")
     print(f"     Location: {location}")
     print(f"     Status:   {status}")
+    print(f"     Pillar:   {pillar}")
     print(f"     Notes:    {notes}")
 
 
@@ -638,6 +640,7 @@ def main():
     p_lg.add_argument("--role", required=True, help="Target role name")
     p_lg.add_argument("--location", help="Role location (e.g. Madrid, Paris, Montevideo, Remote)")
     p_lg.add_argument("--status", default="Applied", help="Status (default: Applied)")
+    p_lg.add_argument("--pillar", help="Technical pillar (e.g. Computer Vision / Robotics)")
     p_lg.add_argument("--notes", help="Notes or source (e.g. LinkedIn Easy Apply)")
     p_lg.set_defaults(func=cmd_log)
 
