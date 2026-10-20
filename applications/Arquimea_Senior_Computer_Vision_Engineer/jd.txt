@@ -1,0 +1,39 @@
+=== JOB DESCRIPTION: Arquimea - Senior Computer Vision Engineer (Madrid, Spain) ===
+
+ARQUIMEA, we are a technology company operating globally and providing innovate solutions and products in highly demanding sectors.
+Our areas of activity are Aerospace, Defense & Security, Big Science, Biotechnology and Fintech.
+
+Main function and scope:
+We are looking for Senior Computer Vision Engineers / Researchers with proven experience in advanced perception algorithm development for demanding real-world systems. The successful candidate will join projects focused on advanced vision systems for applications such as ultra long-range surveillance, autonomous navigation and multidisciplinary robotics, involving visible, infrared and event-based sensing technologies.
+The selected candidates will contribute to the design, development and validation of advanced computer vision algorithms for degraded and dynamic environments. Depending on background and strengths, responsibilities may focus on image enhancement and fusion, or on detection, tracking and event-based perception. This is a highly applied research role in a dynamic, multidisciplinary and multicultural environment, with direct impact on system performance and product evolution.
+
+Core functions:
+- Design and develop advanced computer vision algorithms for advance robotics systems.
+- Develop perception pipelines for visible, infrared and event-based sensing systems.
+- Contribute to image enhancement tasks such as defogging, deblurring, denoising and super-resolution.
+- Develop target detection, motion analysis and tracking algorithms for challenging operational scenarios.
+- Investigate and implement multi-sensor fusion strategies across heterogeneous sensing channels.
+- Evaluate algorithm performance under adverse atmospheric conditions, long ranges and real-world constraints.
+- Optimization of Autonomous Navigation Systems for Robotic Platforms
+- Define validation methodologies, datasets, metrics and benchmarking procedures.
+- Analyse failures, identify performance bottlenecks and propose design improvements.
+- Collaborate in the integration of algorithms into software architectures and operational systems.
+- Work closely with software, control, mechanical, systems and test teams in the technical planning and execution of the project.
+
+Required experience and candidate profile:
+- Degree in Computer Science, Telecommunications Engineering, Electrical Engineering, Mathematics, Physics or similar.
+- Senior-level experience in computer vision, machine perception, computational imaging or related areas.
+- Strong experience in at least one of the following domains: image enhancement/restoration, super-resolution, multi-sensor fusion, target detection or tracking.
+- Solid programming skills in Python and C++, with hands-on experience using OpenCV, PyTorch, TensorFlow or similar frameworks.
+- Experience developing robust algorithms for real-world environments and evaluating them with clear performance criteria.
+- Familiarity with real-time systems, embedded computing or GPU optimisation.
+- Strong problem-solving and analytical skills.
+- Fluent English, both written and spoken.
+- Willingness to relocate to the Canary Islands or Madrid (Torrejón de Ardoz).
+- Curiosity, adaptability and willingness to learn completely new technologies.
+
+This position can be based either at Avenida Premios Nobel 51, Torrejón de Ardoz (Madrid), or at the Nanotec Building, San Cristóbal de La Laguna (Tenerife).
+Departamento: Ingeniería
+Ubicaciones: Madrid - Premios Nobel (Torrejón de Ardoz), Tenerife - Nanotec
+Estado remoto: Híbrido
+Tipo de empleo: Tiempo completo

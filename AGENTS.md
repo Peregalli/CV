@@ -18,3 +18,4 @@
 
 3. **Explicit User Requests**:
    Any modification to Technical Skills, Work Experience bullets, or Education must be explicitly requested by the user.
+
